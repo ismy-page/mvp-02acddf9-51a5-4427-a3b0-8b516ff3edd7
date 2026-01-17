@@ -6,7 +6,14 @@
   const out = document.getElementById("ctaResult");
   if (btn && out) {
     btn.addEventListener("click", () => {
-      out.textContent = "Lovely choice. Now tailor the words and colors to your story.";
+      const email = "hello@example.com";
+      const subject = encodeURIComponent("Commission inquiry — Living Paintings");
+      const body = encodeURIComponent(
+        "Hi, I’d love to discuss a commission or collaboration.\n\nDetails:"
+      );
+      out.textContent = "Opening your email client…";
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     });
   }
 })();
+
